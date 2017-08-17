@@ -51,28 +51,7 @@ console.log("resultat3: "+ resultat3);
 
 //-------------------------------------
 
-/*
-Créer une variable afficherOperation qui a les caractéristiques suivantes :
-◦ Les paramètres suivants :
-▪ nomOperation de type String qui représente le nom d’une opération.
-▪ operation de type Fonction qui représente la fonction à exécuter.
-▪ nb1 de type Nombre
-▪ nb2 de type Nombre
-◦ L’implémentation consiste à afficher dans la console une chaîne de caractères de la forme
-suivante :
 
-<nomOperation> [ nb1 == <nb1> nb2 == <nb2> ] == <resultat invocation <operation>>
-
-
-function operation(nb1,nb2,nomOperation){
-	if(nomOperation==="additionner"){
-		return additionner(nb1,nb2);
-	}else if(nomOperation==="multiplication"){
-		return multiplication(nb1,nb2);
-	}
-	
-}
-*/
 
 var afficheOperation = function(nomOperation, operation, nb1, nb2){
 	return nomOperation +"[ nb1 == "+ nb1 + " nb2 == " + nb2  +"] == "+ operation(nb1,nb2);
@@ -81,7 +60,9 @@ var afficheOperation = function(nomOperation, operation, nb1, nb2){
 console.log(afficheOperation("Somme",additionner, 20,40));
 console.log(afficheOperation("Multiplication",multiplication, 10,20));
 
-//console.log(afficheOperation("Soustraction",soustraire(){}, 15,5));
+console.log(afficheOperation("Soustraction",function(nb1,nb2){
+	return nb1-nb2;
+}, 15,5));
 
 
 
