@@ -11,22 +11,20 @@ function listerToutesLesSessions(){
 }
 
 
-var ifIdValide = function(element){
-	return element.id;
-}
-
 function trouverUneSession(idSession){
-	return listerToutesLesSessions().filter(ifIdValide);
-		
-	
+  return moduleDevfest.sessions.find(
+            function(element){
+                return element.id===idSession;
+            }
+        );	
 }
 
-var ifTopSeaker = function(element){
+var ifTopSpeaker = function(element){
 		return element.topspeaker === true;
 };
 
 function listerTopPresentateurs(){
-	return listerTousLesPresentateurs().filter(ifTopSeaker)
+	return listerTousLesPresentateurs().filter(ifTopSpeaker)
 }
 
 exports.displayAllPresentateurs = listerTousLesPresentateurs;

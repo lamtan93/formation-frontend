@@ -30,9 +30,6 @@ console.log('villes avec un tiret: ' + villes.some(auMoinsUneVilleAvecUnTiret));
 villesSansTiretSansEspace = function(element, index, array) {
 
 	return (!element.match('-') && !element.match(' '));
-
-
-
 }
 
 console.log('villes sans espace et tiret: ' + villes.filter(villesSansTiretSansEspace));
