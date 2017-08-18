@@ -1,8 +1,8 @@
-function Personne(nom, prenom, pseudo) {
+function Personne(nom, prenom, pseudo, numero) {
 	this.nom = nom;
 	this.prenom = prenom;
 	this.pseudo = pseudo;
-
+	this.numero = numero;
 	this.getNomComplet = function() {
 		return this.nom + " " + this.prenom + " " + this.pseudo;
 	};
@@ -15,7 +15,6 @@ var paul = new Personne("LEMAIRE", "Paul", "paul44");
 var afficherPersonne = function(personne) {
 	console.log(personne.nom, "|", personne.prenom, "|", personne.pseudo, "|", personne.getNomComplet());
 };
-
 afficherPersonne(jules);
 afficherPersonne(paul);
 
