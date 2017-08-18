@@ -109,3 +109,20 @@ const defaultTrip = Trip.getDefaultTrip();
 
 console.log('static: ' + defaultTrip.toString());
 
+console.log('=================Heritage===================');
+
+class FreeTrip extends Trip{
+
+constructor(id, name, imageUrl){
+	super(id, name, imageUrl);
+	this._price = 0;
+}
+	toString(){
+        return super.toString()
+    }
+}
+
+const freeTrip = new FreeTrip('nantes', 'Nantes', 'img/nanges.jpg');
+console.log(freeTrip.toString());
+
+
