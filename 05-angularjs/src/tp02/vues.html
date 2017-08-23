@@ -1,0 +1,31 @@
+<section id="tp02">
+<h1>TP 02 - Vues et Expressions</h1>
+<!-- TODO ici bientôt des directives -->
+
+<select ng-model="show">
+	<option value="true">affiché</option>
+	<option value="false">caché</option>
+</select>
+
+
+<p ng-show="show == 'true' ">Ce text est affiché </p>
+<p ng-hide="show != 'false' ">Ce text est affiché si choisir caché </p>
+
+<p ng-if ="show == 'true'">Créé uniquement si show=true</p>
+
+
+<div>
+<div ng-show="show == 'true'">Affiché</div>
+<div ng-show= "show == 'false'">Caché</div>
+<div ng-show= "show == null">Par défaut</div>
+</div>
+
+
+<div ng-repeat="item in [0,1,2, 3, 4,5 ,6 ,7 ,8 ,9 ,10]" >
+<p >{{$index}} {{$odd}} Item: {{item}}</p>
+
+</div>
+
+
+<!--<img ng-src="./img/tokyo.jpg"></div>-->
+</section>
