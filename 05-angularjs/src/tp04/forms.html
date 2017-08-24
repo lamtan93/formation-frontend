@@ -37,9 +37,18 @@ E-mail: <input type="text" ng-model="ctrl.currentUser.email"/><br>
 <!-- Test 3 : validation -->
 <!-- TODO : ajouter une validation Angular avec affichage des erreurs et
 utilisation des classes CSS -->
-<form name="form3">
-Name: <input type="text" required/><br>
-E-mail: <input type="email" required/><br>
+<form name="form3" novalidate ng-controller="FormController as ctrl">
+		Name: <input name="name"  type="text" required ng-model="ctrl.currentUser.name" /><br>
+		<span ng-show="form3.name.$error.required">Required Name</span>
+<br/>
+		E-mail: <input  name="email" type="email" required ng-model="ctrl.currentUser.email" /><br>
+
+	<div ng-show="form3.email.$dirty && form3.email.$invalid">
+	Invalid:
+		<span ng-show="form3.email.$error.required">Required Email</span>
+		<span ng-show="form3.email.$error.email">Invalid email.</span>
+	</div>
+
 </form>
 
 </section>

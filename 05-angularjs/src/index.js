@@ -10,9 +10,7 @@ import tplTp04 from './tp04/forms.html'
 
 // insertion du code HTML dans le corps de la page principale
 document.querySelector('body').innerHTML = [tplTp01,tplTp02,tplTp03,tplTp04].join('<hr>');
-/*document.querySelector('body').innerHTML = [tplTp02].join('<hr>');
-document.querySelector('body').innerHTML = [tplTp03].join('<hr>');
-document.querySelector('body').innerHTML = [tplTp04].join('<hr>');*/
+
 
 import CarrouselCtrl from './tp03/carrousel.controller'
 import FormController from './tp04/forms.controller'

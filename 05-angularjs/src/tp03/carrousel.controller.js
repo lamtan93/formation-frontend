@@ -48,7 +48,7 @@ export default class CarrouselCtrl {
             { 'name': 'Tokyo', 'url': 'img/tokyo.jpg' }
         ];
         this.currentId = 0;
-        this.$interval(() => this.next(), 1500);
+        //this.$interval(() => this.next(), 1500);
     }
 
     next(){
