@@ -4,15 +4,15 @@ export default class TripController {
 		this.$scope = $scope;
 		this.$http = $http;
 		this.listTrip = [];
+		this.status = 'KO';
 	}
 
 
 	$onInit() {
-		
-			this.$http.get('http://localhost:3000/trips')
-				.then((res)=>{
-					this.listTrip = res.data;
-				});
+		this.$http.get('http://localhost:3000/trips')
+			.then((res) => {
+				this.listTrip = res.data;
+			});
 	}
 
 
@@ -30,22 +30,21 @@ export default class TripController {
 				trip.name = name;
 				trip.prix = prix;
 
-
-				console.log(trip.name);
+				console.log('trip name: ' + trip.name);
 				this.$http({
 						method: 'PUT',
 						url: 'http://localhost:3000/trips' + '/' + idRecherche,
 						data: trip
 					})
 					.then((res) => {
-						console.log(res.statusText, res.status)
-
+						console.log('status :'+res.statusText, res.status)
+						this.status = res.statusText;
+					},(res) => {
+						console.log('erreur: ' + res.statusText+ ',' + res.status);
 					})
-
-
+			},(res) => {
+				console.log('erreur: ' + res.statusText + ',' + res.status);
 			})
-
-
 
 	}
 

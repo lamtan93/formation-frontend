@@ -2,21 +2,21 @@
   "trips": [
     {
       "id": "paris",
-      "name": "Paris super beau",
+      "name": "Paris super beau az",
       "imageUrl": "img/paris.jpg",
-      "prix": "1500"
+      "prix": "150014"
     },
     {
       "id": "nyc",
-      "name": "HoChiMinh City",
+      "name": "Dubai beau",
       "imageUrl": "img/nyc.jpg",
-      "prix": "3000"
+      "prix": "456789"
     },
     {
       "id": "rome",
       "name": "Rome Romatique",
       "imageUrl": "img/rome.jpg",
-      "prix": 300
+      "prix": "3004545"
     },
     {
       "id": "rio-de-janeiro",
