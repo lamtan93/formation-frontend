@@ -1,30 +1,38 @@
 {
-
   "trips": [
     {
       "id": "paris",
-      "name": "Paris",
-      "imageUrl": "img/paris.jpg"
+      "name": "Paris super beau",
+      "imageUrl": "img/paris.jpg",
+      "prix": "1500"
     },
     {
       "id": "nyc",
-      "name": "New York",
-      "imageUrl": "img/nyc.jpg"
+      "name": "HoChiMinh City",
+      "imageUrl": "img/nyc.jpg",
+      "prix": "3000"
     },
     {
       "id": "rome",
-      "name": "Rome",
-      "imageUrl": "img/rome.jpg"
+      "name": "Rome Romatique",
+      "imageUrl": "img/rome.jpg",
+      "prix": 300
     },
     {
       "id": "rio-de-janeiro",
       "name": "Rio de Janeiro",
-      "imageUrl": "img/rio-de-janeiro.jpg"
+      "imageUrl": "img/rio-de-janeiro.jpg",
+      "prix": 400
     },
     {
       "id": "tokyo",
       "name": "Tokyo",
-      "imageUrl": "img/tokyo.jpg"
+      "imageUrl": "img/tokyo.jpg",
+      "prix": "200"
+    },
+    {
+      "name": "nouveau",
+      "id": "HJMry72_W"
     }
   ],
   "trips-details": [
@@ -113,7 +121,6 @@
           "name": "Times Square",
           "imageUrl": "img/nyc-timessquare.jpg"
         }
-
       ],
       "geolocation": {
         "latitude": 40.71435,
@@ -132,7 +139,6 @@
           "number": 1,
           "name": "Panthéon",
           "imageUrl": "img/rome-pantheon.jpg"
-
         },
         {
           "number": 2,
@@ -174,9 +180,9 @@
           "imageUrl": "img/rio-santateresa.jpg"
         }
       ],
-      "geolocation" : {
-        "latitude" : -22.91340,
-        "longitude" : -43.20071
+      "geolocation": {
+        "latitude": -22.9134,
+        "longitude": -43.20071
       }
     },
     {
@@ -203,11 +209,10 @@
           "imageUrl": "img/tokyo-skytree.jpg"
         }
       ],
-      "geolocation" : {
-        "latitude" : 35.68949,
-        "longitude" : 139.69171
+      "geolocation": {
+        "latitude": 35.68949,
+        "longitude": 139.69171
       }
     }
   ]
-
 }

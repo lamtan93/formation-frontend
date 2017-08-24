@@ -1,0 +1,16 @@
+<section id="tp05" ng-controller="TripController as tripCtr">
+<h1>TP 05 - Communication avec $http</h1>
+
+
+<div ng-repeat="trip in tripCtr.listTrip">
+
+	<input type="text" name="trip" ng-model="trip.name">  <input type="text" name="prix" ng-model="trip.prix">	
+	<button ng-click="tripCtr.save(trip.id, trip.name, trip.prix)">Save</button><br>
+	
+	<img ng-src="{{trip.imageUrl}}"><br/><br/><br/>
+
+</div>
+
+<!--<button ng-click = "tripCtr.getTripById('paris')">Clicker</button>-->
+
+</section>
