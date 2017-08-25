@@ -40,4 +40,3 @@ angular.module('tripApp', ['ngResource'])
 .service('StepsService', StepsService)
 .factory('CommentsService', CommentsService)
 
-

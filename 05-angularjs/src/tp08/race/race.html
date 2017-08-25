@@ -8,11 +8,15 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <section id="tp08" ng-app="raceModule">
-<script src="bundle.js"></script>
+<span ng-bind="person"></span>
+<div >
+
 <h1>TP 08 - Modules</h1>
 
 <h3>Pariez</h3>
-<button class="btn btn-primary btn-infos">Paul</button> <button class="btn btn-primary btn-success">Jean</button> <button class="btn btn-danger btn-success">Julie</button><br>
+<button ng-model="person" class="btn btn-primary btn-infos" value="Paul">Paul</button> <button ng-model="person" class="btn btn-primary btn-success">Jean</button> <button ng-model="person" class="btn btn-danger btn-success">Julie</button><br>
+
+
 
 <h3>La course</h3>
 <button class="btn btn-default">Lancer la course</button>
@@ -37,6 +41,6 @@
   </div>
   
 
-
+</div>
 
 </section>

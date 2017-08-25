@@ -17,7 +17,12 @@ export default class RaceService {
 		}]
 	}
 	update(name, progress) {
-		// TODO
+		list().forEach((e)=>{
+			if(e.name === name){
+				e.progress = progress;
+			}
+		})
+
 	}
 	list() {
 		return this.walkers
