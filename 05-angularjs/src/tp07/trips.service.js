@@ -1,22 +1,16 @@
 export default class TripService{
 
-	constructor($http, $log){
+	constructor($http, $log, apiUrls){
 		this.$http = $http;
 		this.$log = $log;
+		this.tabTrips = [];
+		this.apiUrls = apiUrls
 	}
 
-	findAll(url){
-		
-		this.$http({
-			url: url,
-			method : 'GET'
-		})
-			.then((res) => {
-				return res.data;
-			});
+	findAll(){	
+		return this.$http.get(this.apiUrls.light)
+			.then((response) => {
+				return response.data
+			});	
 	}
-
-
-
-
 }

@@ -1,11 +1,17 @@
-export class StepService{
-	constructor($http, $log){
+export default class StepsService{
+
+	constructor($http, $log, apiUrls){
 		this.$http = $http;
 		this.$log = $log;
+		this.tabTrips = [];
+		this.apiUrls = apiUrls
 	}
 
 
-	findStepsByTripId(){
-		
+	findStepsByTripId(id){
+		return this.$http.get(this.apiUrls.full+'/'+id)
+			.then((response) => {
+				return response.data.steps;
+			});	
 	}
 }

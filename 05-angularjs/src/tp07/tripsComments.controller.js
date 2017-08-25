@@ -1,17 +1,42 @@
-
 export default class CommentController{
 
-	constructor($http, $log, TripService){
+	constructor($scope, $http, $log, TripService,StepsService, apiUrls){
+
+		this.$scope = $scope;
 		this.$http = $http;
 		this.$log = $log;
-		this.tabTrips = [];
 		this.TripService = TripService;
+		this.StepsService = StepsService;
+		//this.CommentsService = CommentsService;
+		this.apiUrls = apiUrls;
+
+		this.tabTrips = [];
+		this.tabTripsSteps = [];
+		
 	}
 
 	$onInit(){
-		//this.tabTrips = this.TripService.findAll();
+		this.TripService.findAll().then((dataDuServeur) => {
+			this.tabTrips = dataDuServeur
+			console.log(this.tabTrips)
+		});
+	}	
+
+
+	findStepsByTripId(tripIdChoisi){
+
+		this.StepsService.findStepsByTripId(tripIdChoisi)
+		.then((resm)=>{
+			this.tabTripsSteps = resm;
+		})
 	}
 
-	
+
+
 
 }
+
+
+CommentController['$inject'] = ['$scope','$http', '$log', 'TripService', 'StepsService', 'apiUrls'];
+
+

@@ -1,7 +1,19 @@
 <section id="tp07" ng-controller="CommentController as cmtCont">
 <h1>TP 07 - Services</h1>
-<!-- TODO -->
-<div ng-repeat="trip in cmtCont.tabTrips"></div>
-	<span ng-model="trip.id"></span>
 
+<select ng-model="tripIdChoisi" ng-change="cmtCont.findStepsByTripId(tripIdChoisi)">
+	<option ng-repeat="trip in cmtCont.tabTrips" value="{{trip.id}}">{{trip.id}}</option>
+</select><br>
+	
+<!--<tt >singleSelect = {{tripIdChoisi}}</tt>-->
+
+<div ng-repeat="step in cmtCont.tabTripsSteps" style="float: left;">
+	<img ng-src="{{step.imageUrl}}"><br>
+	<span ng-bind="step.name"></span>
+</div> 
+
+<div>
+	<textarea style="width: 600px; height: 50px"></textarea><br>
+	<button>Comment</button>
+</div>
 </section>
