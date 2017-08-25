@@ -14,7 +14,7 @@ import tplTp07 from './tp07/tripsComments.html';
 import apiUrls from './tp07/apiUrls.service.js';
 import TripService from './tp07/trips.service.js';
 import StepsService from './tp07/steps.service.js';
-//import CommentsService from './tp07/comments.service.js';
+import CommentsService from './tp07/comments.service.js';
 
 document.querySelector('body').innerHTML =
 [tplTp01,tplTp02,tplTp03,tplTp04, tplTp05, tplTp06,tplTp07].join('<hr>');
@@ -38,6 +38,6 @@ angular.module('tripApp', ['ngResource'])
 .constant('apiUrls', apiUrls)
 .service('TripService', TripService)
 .service('StepsService', StepsService)
-//.factory('CommentsService', CommentsService)
+.factory('CommentsService', CommentsService)
 
 

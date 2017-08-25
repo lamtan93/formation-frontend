@@ -1,29 +1,39 @@
-/*//--------------Factory--------------------
-function CommentService($http, $log, $log) {
-
+//--------------Factory--------------------
+function CommentService($http, $log, apiUrls) {
+	/*this.$http = $http;
+	this.$log = $log;*/
 
 	return {
-
+			
 			findByTripId : function(tripId) {
-				return this.$http.get(apiUrls.full + '/' + tripId);
-			}
+				return $http.get(apiUrls.full + '/' + tripId);
+			},
 
-			addComment : function(tripId, comment) {
-			let trip;
-			this.findByTripId(apiUrls.full + '/' + tripId)
+			addComment: function(tripId, comment) {
+			
+			this.findByTripId(tripId)
 				.then((res) => {
-					trip = res.data;
-					trip.comment = comment;
-					this.$http({
+					this.tabComments = res.data.comments;
+
+					 this.newComment = {
+					'id' : 'Anonymous',
+					'text' : comment
+					}
+					this.tabComments.push(this.newComment)
+					
+					
+						$http({
 						method: 'PUT',
-						url: url + '/' + tripId,
-						data: trip
+						url: apiUrls.full + '/' + tripId,
+						data: this.tabComments
 					}).then((res) => {
-						this.$log.log('status :' + res.statusText, res.status)
+						$log.log('status :' + res.statusText, res.status)
 					}, (res) => {
-						this.$log.log('erreur: ' + res.statusText + ',' + res.status);
+						$log.log('erreur: ' + res.statusText + ',' + res.status);
 					})
 
+				},(err)=>{
+					console.log(err.status+'--'+err.statusText)
 				})
 			}
 	}
@@ -31,4 +41,4 @@ function CommentService($http, $log, $log) {
 }
 
 
-export default CommentService;*/
+export default CommentService;

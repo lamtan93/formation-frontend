@@ -1,7 +1,7 @@
 <section id="tp07" ng-controller="CommentController as cmtCont">
 <h1>TP 07 - Services</h1>
 
-<select ng-model="tripIdChoisi" ng-change="cmtCont.findStepsByTripId(tripIdChoisi)">
+<select ng-model="tripIdChoisi" ng-change="cmtCont.findStepsByTripId(tripIdChoisi);cmtCont.findByTripId(tripIdChoisi)" >
 	<option ng-repeat="trip in cmtCont.tabTrips" value="{{trip.id}}">{{trip.id}}</option>
 </select><br>
 	
@@ -10,10 +10,19 @@
 <div ng-repeat="step in cmtCont.tabTripsSteps" style="float: left;">
 	<img ng-src="{{step.imageUrl}}"><br>
 	<span ng-bind="step.name"></span>
-</div> 
+</div><br><br>
+
+<!--place for Comments-->
+<div ng-repeat="comment in cmtCont.tabComments">
+	<span ng-bind="comment.id">:</span>
+	: <span ng-bind="comment.text"></span>
+</div>
+
+<!--place for add a comment-->
 
 <div>
-	<textarea style="width: 600px; height: 50px"></textarea><br>
-	<button>Comment</button>
+	<textarea ng-model="commentAnonymous" style="width: 600px; height: 50px"></textarea><br>
+	<button ng-click="cmtCont.addComment(tripIdChoisi,commentAnonymous)">Comment</button>
 </div>
+
 </section>
