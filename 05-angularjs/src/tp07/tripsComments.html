@@ -2,6 +2,7 @@
 <h1>TP 07 - Services</h1>
 
 <select ng-model="tripIdChoisi" ng-change="cmtCont.findStepsByTripId(tripIdChoisi);cmtCont.findByTripId(tripIdChoisi)" >
+<option value="" selected disabled hidden>Choose here</option>
 	<option ng-repeat="trip in cmtCont.tabTrips" value="{{trip.id}}">{{trip.id}}</option>
 </select><br>
 	

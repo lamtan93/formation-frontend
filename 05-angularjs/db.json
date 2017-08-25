@@ -1,10 +1,10 @@
 {
-
   "trips": [
     {
       "id": "paris",
       "name": "Paris",
-      "imageUrl": "img/paris.jpg"
+      "imageUrl": "img/paris.jpg",
+      "prix": "457"
     },
     {
       "id": "nyc",
@@ -43,6 +43,34 @@
         {
           "id": "jean49",
           "text": "J'ai détesté"
+        },
+        {
+          "id": "anonymous",
+          "text": "Lam: OK"
+        },
+        {
+          "id": "anonymous",
+          "text": "Lam: OK"
+        },
+        {
+          "id": "anonymous",
+          "text": "Lam: OK"
+        },
+        {
+          "id": "Anonymous",
+          "text": "HIHIH"
+        },
+        {
+          "id": "Anonymous",
+          "text": "HAHAHA"
+        },
+        {
+          "id": "Anonymous",
+          "text": "HAHAHA"
+        },
+        {
+          "id": "Anonymous",
+          "text": "HOHO"
         }
       ],
       "steps": [
@@ -90,6 +118,10 @@
         {
           "id": "jean49",
           "text": "J'ai détesté"
+        },
+        {
+          "id": "Anonymous",
+          "text": "C'est trop beau ici"
         }
       ],
       "steps": [
@@ -113,7 +145,6 @@
           "name": "Times Square",
           "imageUrl": "img/nyc-timessquare.jpg"
         }
-
       ],
       "geolocation": {
         "latitude": 40.71435,
@@ -132,7 +163,6 @@
           "number": 1,
           "name": "Panthéon",
           "imageUrl": "img/rome-pantheon.jpg"
-
         },
         {
           "number": 2,
@@ -174,9 +204,9 @@
           "imageUrl": "img/rio-santateresa.jpg"
         }
       ],
-      "geolocation" : {
-        "latitude" : -22.91340,
-        "longitude" : -43.20071
+      "geolocation": {
+        "latitude": -22.9134,
+        "longitude": -43.20071
       }
     },
     {
@@ -203,11 +233,10 @@
           "imageUrl": "img/tokyo-skytree.jpg"
         }
       ],
-      "geolocation" : {
-        "latitude" : 35.68949,
-        "longitude" : 139.69171
+      "geolocation": {
+        "latitude": 35.68949,
+        "longitude": 139.69171
       }
     }
   ]
-
 }

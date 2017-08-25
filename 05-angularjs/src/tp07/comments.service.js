@@ -1,7 +1,5 @@
 //--------------Factory--------------------
 function CommentService($http, $log, apiUrls) {
-	/*this.$http = $http;
-	this.$log = $log;*/
 
 	return {
 			
@@ -13,18 +11,19 @@ function CommentService($http, $log, apiUrls) {
 			
 			this.findByTripId(tripId)
 				.then((res) => {
-					this.tabComments = res.data.comments;
+					this.trip = res.data;
 
-					 this.newComment = {
-					'id' : 'Anonymous',
-					'text' : comment
-					}
-					this.tabComments[this.tabComments.length] = this.newComment;
-					
+					this.newComment = ({
+						'id': 'Anonymous',
+						'text': comment
+					})
+
+					this.trip.comments.push(this.newComment);
+
 						$http({
 						method: 'PUT',
 						url: apiUrls.full + '/' + tripId,
-						data: this.tabComments
+						data: this.trip
 					}).then((res) => {
 						$log.log('status :' + res.statusText, res.status)
 					}, (res) => {
