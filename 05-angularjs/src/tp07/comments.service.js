@@ -19,8 +19,7 @@ function CommentService($http, $log, apiUrls) {
 					'id' : 'Anonymous',
 					'text' : comment
 					}
-					this.tabComments.push(this.newComment)
-					
+					this.tabComments[this.tabComments.length] = this.newComment;
 					
 						$http({
 						method: 'PUT',
