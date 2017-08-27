@@ -1,6 +1,9 @@
 console.log('Bonjour simulator Module')
-import SimulatorService from './tp08/simulator/simulator.service.js';
-import raceModule from './tp08/race/race.module.js';
+import SimulatorService from './simulator.service.js';
+import RaceModule from '../race/race.module.js';
+import RaceService from '..race/race.service.js'
 
-angular.module('simulatorModule', [raceModule])
+
+angular.module('SimulatorModule', [RaceModule])
 .service('SimulatorService', SimulatorService)
+.service('RaceService', RaceService)

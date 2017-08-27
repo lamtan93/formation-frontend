@@ -4,6 +4,7 @@ export default class SimulatorService {
 		this.$http = $http;
 		this.$log = $log;
 		this.RaceService = RaceService;
+		this.listRace = this.RaceService.list();
 	}
 
 	getRandomNumber() {
@@ -16,15 +17,15 @@ export default class SimulatorService {
 		//secondes
 		// Utiliser le service RaceService
 
-		let interval = setInterval(function() {
+		let interval = setInterval(()=> {
 
-			this.RaceService.list().forEach((e) => {
-				this.RaceService.update(e.name, getRandomNumber())
+			this.listRace.forEach((e) => {
+				this.RaceService.update(e.name, this.getRandomNumber())
 			})
 		}, 1000);
 
 		//to stop
-		//clearInterval(myInterval);
+			//clearInterval(interval);
 	}
 }
 

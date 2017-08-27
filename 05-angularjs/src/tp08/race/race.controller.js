@@ -1,23 +1,22 @@
 export default class RaceController{
 
-	constructor($scope, $http, $log, RaceService){
+	constructor($scope, $http, $log, RaceService, SimulatorService){
 		this.$scope =$scope;
 		this.$http =$http;
 		this.$log =$log;
 		this.RaceService = RaceService;
+		this.SimulatorService = SimulatorService;
 		this.tabAllRacer = [];
 	}
 
+	 $onInit(){
+		 this.tabAllRacer = this.RaceService.list();
+	 }
 
-	list() {
-		this.tabAllRacer = this.RaceService.list();
-	}
-
-
-	update(name, progress){
-		this.RaceService.update(name, progress);
+	start(){
+		this.SimulatorService.start();
 	}
 
 }
 
-RaceController['$inject'] = ['$scope','$http', '$log', 'RaceService'];
+RaceController['$inject'] = ['$scope','$http', '$log', 'RaceService', 'SimulatorService'];

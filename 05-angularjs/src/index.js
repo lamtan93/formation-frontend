@@ -17,7 +17,8 @@ import StepsService from './tp07/steps.service.js';
 import CommentsService from './tp07/comments.service.js';
 
 document.querySelector('body').innerHTML =
-[tplTp01,tplTp02,tplTp03,tplTp04, tplTp05, tplTp06,tplTp07, tplTp08].join('<hr>');
+//[tplTp01,tplTp02,tplTp03,tplTp04, tplTp05, tplTp06,tplTp07, tplTp08].join('<hr>');
+[tplTp08].join('<hr>');
 
 
 import CarrouselCtrl from './tp03/carrousel.controller'
@@ -26,7 +27,9 @@ import TripController from "./tp05/tripsList.controller";
 import tripControllerDetail from "./tp06/tripsListDetails.controller";
 import CommentController from "./tp07/tripsComments.controller";
 
-angular.module('tripApp', ['ngResource']) 
+import RaceModule from "./tp08/race/race.module.js"
+
+angular.module('tripApp', ['ngResource'])
 
 .controller(CarrouselCtrl.name, CarrouselCtrl)
 .controller('FormController', FormController)
@@ -39,4 +42,3 @@ angular.module('tripApp', ['ngResource'])
 .service('TripService', TripService)
 .service('StepsService', StepsService)
 .factory('CommentsService', CommentsService)
-

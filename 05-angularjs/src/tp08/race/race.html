@@ -1,46 +1,28 @@
-<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<section id="tp08" ng-controller="RaceController as raceContr">
+    <span ng-bind="person"></span>
+    <div>
+        <h1>TP 08 - Modules</h1>
+        <h3>Pariez</h3>
+        <button  class="btn btn-primary btn-infos" value="Paul">Paul</button>
+        <button class="btn btn-primary btn-success" value="Jean">Jean</button>
+        <button class="btn btn-danger btn-success" value="Julie">Julie</button>
 
-<section id="tp08" ng-app="raceModule">
-<span ng-bind="person"></span>
-<div >
+        <br>
+        <h3>La course</h3>
+        <button class="btn btn-default" ng-click="raceContr.start()">Lancer la course</button>
+        <p>Gagnant: </p>
 
-<h1>TP 08 - Modules</h1>
+      <div ng-repeat="pr in raceContr.tabAllRacer">
+        <div class="progress">
+            <div class="progress-bar progress-bar-{{pr.shirt}}" role="progressbar" style="width:{{pr.progress}}%">
+                <span style="color:black">{{pr.name}} {{pr.progress}}%</span>
+            </div>
+        </div>
 
-<h3>Pariez</h3>
-<button ng-model="person" class="btn btn-primary btn-infos" value="Paul">Paul</button> <button ng-model="person" class="btn btn-primary btn-success">Jean</button> <button ng-model="person" class="btn btn-danger btn-success">Julie</button><br>
+      </div>
 
-
-
-<h3>La course</h3>
-<button class="btn btn-default">Lancer la course</button>
-
-
-  <p>Gagnant: </p>
-  
-  <div class="progress">
-    <div class="progress-bar progress-bar-success" role="progressbar"  style="width:40%">
-      Paul 40%  
     </div>
-  </div>
-  <div class="progress">
-    <div class="progress-bar progress-bar-info" role="progressbar" style="width:50%">
-      Jean 50% 
-    </div>
-  </div>
-  <div class="progress">
-    <div class="progress-bar progress-bar-warning" role="progressbar" style="width:60%">
-     Julie 60%
-    </div>
-  </div>
-  
-
-</div>
-
 </section>

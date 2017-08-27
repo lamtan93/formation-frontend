@@ -1,30 +1,34 @@
 export default class RaceService {
 	constructor() {
 		// la valeur de shirt est inspirée de la codification Bootstrap pour un choix
-		aisée des couleurs
+		//aisée des couleurs
 		this.walkers = [{
 			name: 'Paul',
-			progress: 0,
+			progress: 10,
 			shirt: 'info'
 		}, {
 			name: 'Jean',
-			progress: 0,
+			progress: 10,
 			shirt: 'success'
 		}, {
 			name: 'Julie',
-			progress: 0,
+			progress: 10,
 			shirt: 'danger'
 		}]
 	}
+
+	list() {
+		return this.walkers
+	}
+
+
 	update(name, progress) {
-		list().forEach((e)=>{
+		this.list().forEach((e)=>{
 			if(e.name === name){
 				e.progress = progress;
 			}
 		})
 
 	}
-	list() {
-		return this.walkers
-	}
+
 }
