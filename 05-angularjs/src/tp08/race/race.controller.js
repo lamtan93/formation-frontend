@@ -9,6 +9,7 @@ export default class RaceController{
 		this.tabAllRacer = [];
 		this.gagnant = {};
 		this.nameChoosen = 'unknown';
+		this.res = 'unknown';
 	}
 
 	 $onInit(){
@@ -31,7 +32,7 @@ export default class RaceController{
 	}
 
 	resultat(){
-		this.RaceService.resultat(this.nameChoosen);
+		this.res = this.RaceService.resultat(this.nameChoosen);
 	}
 
 }

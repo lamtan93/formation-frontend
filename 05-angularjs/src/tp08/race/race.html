@@ -16,9 +16,12 @@
 
         <br>
         <h3>La course</h3>
-        <button class="btn btn-default" ng-click="raceContr.start()">Lancer la course</button>
-       
+        <button class="btn btn-default" ng-click="raceContr.start()">Lancer la course</button><br>
 
+        <span ng-show="raceContr.res != 'unknown'">
+       	<span>{{raceContr.res}}</span>
+       	</span>
+       	<br>
       <div ng-repeat="pr in raceContr.tabAllRacer">
         <div class="progress">
             <div class="progress-bar progress-bar-{{pr.shirt}}" role="progressbar" style="width:{{pr.progress}}%">

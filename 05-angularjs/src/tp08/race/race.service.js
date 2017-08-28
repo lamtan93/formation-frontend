@@ -57,12 +57,13 @@ export default class RaceService {
 		this.gagnant = this.quiGagne();
 		if(this.gagnant.name === nameParie){
 			console.log("Vous avez gagné !");
-			//res = "Vous avez gagné !";
+			 res = "Vous avez gagné !";
+			 
 		}else{
 			console.log("Vous avez perdu !");	
-			//res = "Vous avez perdu !";
+			return res = "Vous avez perdu !";
 		}
-		
+		return res;
 	}
 
 }
