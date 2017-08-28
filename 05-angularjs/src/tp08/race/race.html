@@ -6,14 +6,17 @@
     <div>
         <h1>TP 08 - Modules</h1>
         <h3>Pariez</h3>
-        <button  class="btn btn-primary btn-infos" value="Paul">Paul</button>
+        <button class="btn btn-primary btn-infos" >Paul</button>
         <button class="btn btn-primary btn-success" value="Jean">Jean</button>
         <button class="btn btn-danger btn-success" value="Julie">Julie</button>
+
+
+        <span>{{Paul}}</span>
 
         <br>
         <h3>La course</h3>
         <button class="btn btn-default" ng-click="raceContr.start()">Lancer la course</button>
-        <p>Gagnant: </p>
+        <p>Gagnant:{{raceContr.gagnant.name}} --> {{raceContr.gagnant.progress}} </p>
 
       <div ng-repeat="pr in raceContr.tabAllRacer">
         <div class="progress">

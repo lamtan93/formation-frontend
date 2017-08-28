@@ -7,14 +7,21 @@ export default class RaceController{
 		this.RaceService = RaceService;
 		this.SimulatorService = SimulatorService;
 		this.tabAllRacer = [];
+		this.gagnant = {};
+		this.$scope.nomchoisi = 'HELLO';
 	}
 
 	 $onInit(){
 		 this.tabAllRacer = this.RaceService.list();
+		 this.quiGagne();
 	 }
 
 	start(){
 		this.SimulatorService.start();
+	}
+
+	quiGagne(){
+		this.gagnant = this.RaceService.quiGagne();
 	}
 
 }

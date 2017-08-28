@@ -4,11 +4,11 @@ export default class RaceService {
 		//aisée des couleurs
 		this.walkers = [{
 			name: 'Paul',
-			progress: 10,
+			progress: 20,
 			shirt: 'info'
 		}, {
 			name: 'Jean',
-			progress: 10,
+			progress: 50,
 			shirt: 'success'
 		}, {
 			name: 'Julie',
@@ -28,6 +28,22 @@ export default class RaceService {
 				e.progress = progress;
 			}
 		})
+
+	}
+
+
+	quiGagne(){
+		this.max = 0;
+		this.gagnant = {'name': 'unknow', 'progress':0, 'shirt':'unknown'};
+		this.list().forEach((e)=>{
+			if(e.progress > this.max){
+				this.max = e.progress;
+				this.gagnant.name = e.name;
+				this.gagnant.progress = e.progress;
+				this.gagnant.shirt = e.shirt;
+			}
+		})
+		return this.gagnant;
 
 	}
 
