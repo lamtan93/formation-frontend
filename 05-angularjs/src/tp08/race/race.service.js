@@ -47,4 +47,9 @@ export default class RaceService {
 
 	}
 
+
+	getName(name){
+		return name;
+	}
+
 }

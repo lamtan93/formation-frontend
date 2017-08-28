@@ -24,8 +24,8 @@ export default class SimulatorService {
 			})
 		}, 1000);
 
-		//to stop
-			//clearInterval(interval);
+		
+		//clearInterval(interval);
 	}
 }
 

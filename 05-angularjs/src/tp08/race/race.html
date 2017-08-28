@@ -6,12 +6,13 @@
     <div>
         <h1>TP 08 - Modules</h1>
         <h3>Pariez</h3>
-        <button class="btn btn-primary btn-infos" >Paul</button>
-        <button class="btn btn-primary btn-success" value="Jean">Jean</button>
-        <button class="btn btn-danger btn-success" value="Julie">Julie</button>
+        <button class="btn btn-primary btn-infos" ng-click="raceContr.getName('Paul')"  >Paul</button>
+        <button class="btn btn-primary btn-success" value="Jean" ng-click="raceContr.getName('Jean')">Jean</button>
+        <button class="btn btn-danger btn-success" value="Julie" ng-click="raceContr.getName('Julie')">Julie</button><br><br>
 
-
-        <span>{{Paul}}</span>
+        <span ng-show="raceContr.nameChoosen != 'unknown'">Vous avez choisi :
+        <span >{{raceContr.nameChoosen}}</span>
+        </span>
 
         <br>
         <h3>La course</h3>
