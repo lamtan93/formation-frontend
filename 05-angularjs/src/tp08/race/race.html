@@ -10,14 +10,14 @@
         <button class="btn btn-primary btn-success" value="Jean" ng-click="raceContr.getName('Jean')">Jean</button>
         <button class="btn btn-danger btn-success" value="Julie" ng-click="raceContr.getName('Julie')">Julie</button><br><br>
 
-        <span ng-show="raceContr.nameChoosen != 'unknown'">Vous avez choisi :
+        <span ng-show="raceContr.nameChoosen != 'unknown'">Vous avez parié pour :
         <span >{{raceContr.nameChoosen}}</span>
         </span>
 
         <br>
         <h3>La course</h3>
         <button class="btn btn-default" ng-click="raceContr.start()">Lancer la course</button>
-        <p>Gagnant:{{raceContr.gagnant.name}} --> {{raceContr.gagnant.progress}} </p>
+       
 
       <div ng-repeat="pr in raceContr.tabAllRacer">
         <div class="progress">

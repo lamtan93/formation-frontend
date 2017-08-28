@@ -31,7 +31,6 @@ export default class RaceService {
 
 	}
 
-
 	quiGagne(){
 		this.max = 0;
 		this.gagnant = {'name': 'unknow', 'progress':0, 'shirt':'unknown'};
@@ -50,6 +49,17 @@ export default class RaceService {
 
 	getName(name){
 		return name;
+	}
+
+
+	resultat(nameParie){
+		this.gagnant = this.quiGagne();
+		if(this.gagnant.name === nameParie){
+			console.log("Vous avez gagné !");
+		}else{
+			console.log("Vous avez perdu !");	
+		}
+		
 	}
 
 }

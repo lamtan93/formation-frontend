@@ -18,6 +18,7 @@ export default class RaceController{
 
 	start(){
 		this.SimulatorService.start();
+		this.resultat();
 	}
 
 	quiGagne(){
@@ -27,6 +28,10 @@ export default class RaceController{
 	getName(name){
 		console.log(this.RaceService.getName(name));
 		this.nameChoosen = this.RaceService.getName(name);
+	}
+
+	resultat(){
+		this.RaceService.resultat(this.nameChoosen);
 	}
 
 }
